@@ -1,9 +1,7 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*
+
 
 ###Spyder Editor
-
-
-
 #import libraries
 import matplotlib.pyplot as plt
 import numpy as np
@@ -54,6 +52,7 @@ y_train = np.array(y_train)
 
 
 #%%%
+
 #data augmentation
 X_train, y_train = shuffle(X_train,y_train, random_state=42)
 datagen = ImageDataGenerator(
@@ -78,12 +77,11 @@ y_test=lb.transform(y_test)
 
 print(y_train)
 #%%%
-#load EfficientNet
 
-EfficientNet=EfficientNetB2(weights='imagenet', include_top=False,input_shape=(image_size,image_size,3))
+#load EfficientNet
+EfficientNet=EfficientNetB6(weights='imagenet', include_top=False,input_shape=(image_size,image_size,3))
 
 #%%%
-
 #train the model
 tf.random.set_seed(79)
 model = EfficientNet.output
@@ -92,21 +90,20 @@ model = tf.keras.layers.Dropout(rate=0.5)(model)
 model = tf.keras.layers.Dense(4,activation='softmax')(model)
 model = tf.keras.models.Model(inputs=EfficientNet.input, outputs = model)
 opt = Adam(
-    learning_rate=0.00006,
+    learning_rate=0.000023,
     epsilon=1e-08,
     clipnorm=1.0)
 
 model.compile(optimizer=opt, loss='sparse_categorical_crossentropy', metrics=['accuracy']) 
 
-
 # summarize the model
 print(model.summary())
 # fit the model
-early_stopping_cb=keras.callbacks.EarlyStopping(patience=9,restore_best_weights=True)
-#bert_model.trainable = False
+early_stopping_cb=keras.callbacks.EarlyStopping(patience=3,restore_best_weights=True)
+
 
 history=model.fit(X_train ,y_train,validation_data = (X_test,y_test),epochs=70,
-    batch_size=12,callbacks=[early_stopping_cb])
+    batch_size=8,callbacks=[early_stopping_cb])
 
 #%%%
 # change directory
@@ -114,8 +111,8 @@ os.chdir(r'C:\\Users\diego\OneDrive\Desktop\DS\brain_cancer\Brain_cancer_classif
 print(os.getcwd())
 
 #save the model
-#model.save(os.path.join('models/','EfficientNetB2.h5'))
-model.save_weights(os.path.join('models/','EfficientNetB2.h5'))
+model.save(os.path.join('models/','EfficientNetB6.h5'))
+model.save_weights(os.path.join('models/','EfficientNetB6_weights.h5'))
 
 #plot loss and accuracy
 pd.DataFrame(history.history).plot(figsize=(8, 5))
@@ -123,7 +120,7 @@ plt.grid(True)
 
 #plt.gca().set_xlim(0,33)
 plt.gca().set_ylim(0,1)
-plt.savefig(os.path.join('plots/','EfficientNetB2.png'), dpi=500)
+plt.savefig(os.path.join('plots/','EfficientNetB6.png'), dpi=500)
 loss, accuracy = model.evaluate(X_test,y_test)
 
 #print accuracy    
@@ -132,24 +129,23 @@ print('Accuracy: %f' % (accuracy*100))
 #%%%
 
 #load_weights 
-image_size = 160 
-EfficientNet=EfficientNetB2(weights='imagenet', include_top=False,input_shape=(image_size,image_size,3))
-model = EfficientNet.output
-model = tf.keras.layers.GlobalAveragePooling2D()(model)
-model = tf.keras.layers.Dropout(rate=0.5)(model)
-model = tf.keras.layers.Dense(4,activation='softmax')(model)
-model = tf.keras.models.Model(inputs=EfficientNet.input, outputs = model)
+#image_size = 160 
+#EfficientNet=EfficientNetB6(weights='imagenet', include_top=False,input_shape=(image_size,image_size,3))
+#model = EfficientNet.output
+#model = tf.keras.layers.GlobalAveragePooling2D()(model)
+#model = tf.keras.layers.Dropout(rate=0.5)(model)
+#model = tf.keras.layers.Dense(4,activation='softmax')(model)
+#model = tf.keras.models.Model(inputs=EfficientNet.input, outputs = model)
 
 
 
 
 #%%%
   #load the model
-#model=keras.models.load_model(os.path.join('models/','EfficientNetB2.h5')) 
-model.load_weights(os.path.join('models/','EfficientNetB2.h5'))
-  #More details about the model
+model=keras.models.load_model(os.path.join('models/','EfficientNetB6.h5'))   
+#  More details about the model
 model.summary()
-#loss, accuracy = model.evaluate(X_test,y_test)
+loss, accuracy = model.evaluate(X_test,y_test)
 
 #print accuracy    
 #print('Accuracy: %f' % (accuracy*100))
