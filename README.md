@@ -17,4 +17,4 @@ In this repository there are 2 notebooks obtained with Jupyter Notebook and 2 Py
 
 Below, I reported the training curves represented for the [notebook](https://github.com/Iron486/Brain_cancer_classification/blob/main/EfficientNetB3.ipynb) with the highest accuracy and lowest loss.
 
-![EfficientNetB3](https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png)
+![EfficientNetB3](<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png" width="570" height="320"/>   </p>)
