@@ -22,8 +22,8 @@ Below, I reported the training curves represented for the [notebook](https://git
 The model reached a 98.16% accuracy with a loss of 0.055.
 
 Below is a table with other metrics 
-precision    recall  f1-score   support
-
+|precision    |recall | f1-score  | support |
+|----------------|---------|--------|---------|
 |    glioma_tumor    |   0.99  |    0.97  |    0.98    |   139 |
     
 |meningioma_tumor     |  0.97  |    0.99  |    0.98  |     141|
