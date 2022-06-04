@@ -17,4 +17,18 @@ In this repository there are 2 notebooks obtained with Jupyter Notebook and 2 Py
 
 Below, I reported the training curves represented for the [notebook](https://github.com/Iron486/Brain_cancer_classification/blob/main/EfficientNetB3.ipynb) with the highest accuracy and lowest loss.
 
-![EfficientNetB3](<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png" width="690" height="420"/>   </p>)
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png" width="690" height="420"/>   </p>
+
+The model reached a 98.16% accuracy with a loss of 0.055.
+
+Below is a table with all the metrics 
+precision    recall  f1-score   support
+
+    glioma_tumor       0.99      0.97      0.98       139
+meningioma_tumor       0.97      0.99      0.98       141
+        no_tumor       0.99      0.99      0.99        75
+ pituitary_tumor       0.99      0.99      0.99       135
+
+        accuracy                           0.98       490
+       macro avg       0.98      0.98      0.98       490
+    weighted avg       0.98      0.98      0.98       490
