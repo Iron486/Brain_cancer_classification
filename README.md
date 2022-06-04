@@ -28,7 +28,5 @@ precision    recall  f1-score   support
 meningioma_tumor       0.97      0.99      0.98       141
         no_tumor       0.99      0.99      0.99        75
  pituitary_tumor       0.99      0.99      0.99       135
-
         accuracy                           0.98       490
-       macro avg       0.98      0.98      0.98       490
-    weighted avg       0.98      0.98      0.98       490
+
