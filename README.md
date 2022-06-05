@@ -44,17 +44,17 @@ Moreover, I plotted some images in the datasets and the respective predicted cla
 
 Below, instead, I plotted the first, an intermediate and the last convolutional layers related to [this notebook](https://github.com/Iron486/Brain_cancer_classification/blob/main/CNN_with_convolutional_layers.ipynb).
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029736-08fa0703-4807-4a67-9c9e-b273e1e81e20.png" width="2035" height="80"/> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029736-08fa0703-4807-4a67-9c9e-b273e1e81e20.png" width="2435" height="80"/> </p>
 
 
 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029739-9318d29a-0d92-46f6-a9f9-169950128c7f.png" width="2035" height="23"/> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029739-9318d29a-0d92-46f6-a9f9-169950128c7f.png" width="2435" height="23"/> </p>
 
 
 
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029746-67c42131-0aea-460f-a3ea-e6b8e7013869.png" width="2035" height="9"/> </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029746-67c42131-0aea-460f-a3ea-e6b8e7013869.png" width="2435" height="9"/> </p>
 
 
-Clicking on the images, it can be noticed that the deeper we go, the less specific are the filters and the image is reduced in size.
+Clicking on the images, it can be noticed that the deeper we go, the less specific are the filters and the image is reduced in size,too.
