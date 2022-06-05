@@ -17,16 +17,44 @@ In this repository there are 2 notebooks obtained with Jupyter Notebook and 2 Py
 
 Below, I reported the training curves represented for the [notebook](https://github.com/Iron486/Brain_cancer_classification/blob/main/EfficientNetB3.ipynb) with the highest accuracy and lowest loss.
 
-<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png" width="690" height="420"/>   </p>
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png" width="610" height="430"/>   </p>
 
-The model reached a 98.16% accuracy with a loss of 0.055.
+**The model reached a 98.16% accuracy with a loss of 0.055**.
 
-Below is a table with other metrics 
+Here is a table with other metrics:
+
 |precision    |recall | f1-score  | support |
 |----------------|---------|--------|---------|
 |    glioma_tumor    |   0.99  |    0.97  |    0.98    |   139 | 
 |meningioma_tumor     |  0.97  |    0.99  |    0.98  |     141|
   |      no_tumor     |  0.99   |   0.99   |   0.99   |     75|      
 | pituitary_tumor     |  0.99    |  0.99  |    0.99 |     135|
- 
 
+Below, instead, I represented the confusion matrix using Seaborn and Matplotlib libraries.
+ 
+<p align="center"> <img src="https://github.com/Iron486/Brain_cancer_classification/blob/main/plots/EfficientNetB3_confusion_matrix.png" width="735" height="590"/>   </p>
+
+An important metrics is the precision (ratio between true positive and true positive plus false positive) calculated for the 'no_tumor' class.
+It's crucial because if the number of **false positive** (people that have a tumor, but the prediction belongs to 'no_tumor' class) is high, it means that a lot of people with a tumor don't have a tumor according to the model. In this case, only one image out of 75 is a false positive.
+
+Moreover, I plotted some images in the datasets and the respective predicted class.
+
+![80ValidationDatasetimages_and_predictedclass_white](https://user-images.githubusercontent.com/62444785/172029617-9e20e656-57b6-4195-a1ea-8cee283c3392.png)
+
+
+Below, instead, I plotted the first, an intermediate and the last convolutional layers related to [this notebook](https://github.com/Iron486/Brain_cancer_classification/blob/main/CNN_with_convolutional_layers.ipynb).
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029736-08fa0703-4807-4a67-9c9e-b273e1e81e20.png" width="2035" height="80"/> </p>
+
+
+
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029739-9318d29a-0d92-46f6-a9f9-169950128c7f.png" width="2035" height="23"/> </p>
+
+
+
+
+<p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172029746-67c42131-0aea-460f-a3ea-e6b8e7013869.png" width="2035" height="9"/> </p>
+
+
+Clicking on the images, it can be noticed that the deeper we go, the less specific are the filters and the image is reduced in size.
