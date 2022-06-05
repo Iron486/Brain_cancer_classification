@@ -14,7 +14,7 @@ In this repository there are 2 notebooks obtained with Jupyter Notebook and 2 Py
 - [EfficientNetB3.ipynb](https://github.com/Iron486/Brain_cancer_classification/blob/main/EfficientNetB3.ipynb) that is the model with the lowest accuracy. I applied 2 addictional hidden layers on top, and represented some images in the dataset and images with their respective predicted class. Moreover, I calculated some metrics (F1 score,precision,recall and accuracy) and I represented a confusion matrix.
 - [CNN_with_convolutional_layers.ipynb](https://github.com/Iron486/Brain_cancer_classification/blob/main/CNN_with_convolutional_layers.ipynb) in which I fit a Convolutional Neural Network with an augmented train dataset and I predicted the model on test dataset. Furthermore, I represented the convolutional layers used to build the model visualizing the application of convolutional filters to a randomly picked image.
 
-
+There are also the folder [plots](https://github.com/Iron486/Brain_cancer_classification/tree/main/plots) containing all the saved plots, [data](https://github.com/Iron486/Brain_cancer_classification/tree/main/data) that contains the train and test datasets and [models](https://github.com/Iron486/Brain_cancer_classification/tree/main/models) in which are the saved models (unfortunately, I could only load one model because the size of the saved models is way too big for the repository).
 Below, I reported the training curves represented for the [notebook](https://github.com/Iron486/Brain_cancer_classification/blob/main/EfficientNetB3.ipynb) with the highest accuracy and lowest loss.
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png" width="610" height="430"/>   </p>
