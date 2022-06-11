@@ -36,7 +36,7 @@ Here is a table with other metrics:
 
 An important metric is the `precision` (ratio between true positive and true positive plus false positive) calculated for the `no_tumor` class.
 
-It's crucial because when the number of **false positive** (people that have a tumor, but the prediction belongs to `no_tumor` class) is high, it means that a lot of people with a tumor don't have a tumor according to the model. 
+It's crucial because when the number of **false positive** (people that have a tumor, but the prediction belongs to `no_tumor` class) is high, it means that a lot of people with a tumor are classified with no tumor according to the model. 
 
 In this case, only one image out of 75 is a false positive as we can see in the confusion matrix represented below using `Seaborn` and `Matplotlib`.
 
