@@ -19,7 +19,7 @@ Below, I reported the training curves represented for the [notebook](https://git
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/62444785/172028786-b25919f7-a963-4e51-8fb3-53a04633ce47.png" width="610" height="430"/>   </p>
 
-**The model reached a 98.16% accuracy with a loss of 0.055**.
+**The model reached 98.16% accuracy with a loss of 0.055**.
 
 Here is a table with other metrics:
 
