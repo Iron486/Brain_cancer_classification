@@ -7,7 +7,7 @@ There were 4 classes: ` 'glioma_tumor', 'meningioma_tumor', 'no_tumor' and 'pitu
 There were given the [train](https://github.com/Iron486/Brain_cancer_classification/tree/main/data/Training) and [test](https://github.com/Iron486/Brain_cancer_classification/tree/main/data/Training) datasets, both containing images belonging to the 4 classes. 
 I fetched the data from here https://www.kaggle.com/datasets/sartajbhuvaji/brain-tumor-classification-mri.
 
-In this repository there are 2 notebooks obtained with Jupyter Notebook and 2 Python scripts produced with Spyder :
+In this repository there are 2 notebooks obtained with Jupyter Notebook and 2 Python scripts produced with Spyder:
 
 - [EfficientNetB2.py](https://github.com/Iron486/Brain_cancer_classification/blob/main/EfficientNetB2.py)) that I used to fit an `EfficientNetB2` model to the train dataset and predict on test dataset.
 - [EfficientNetB6.py](https://github.com/Iron486/Brain_cancer_classification/blob/main/EfficientNetB6.py) in which I trained an `EfficientNetB6` model and I predicted the model on test dataset.
